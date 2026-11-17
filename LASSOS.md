@@ -4,7 +4,7 @@ A lasso gives a finite prefix to follow once and a nonempty cycle to repeat
 forever. This mode shows a concrete failure for each losing fixed-policy/root
 pair. It does not replace the original repeated-goal report.
 
-[Live inspector](https://midya8.github.io/buchilab/lassos.html) | [Base fixed-point method and seven-source ledger](METHOD.md)
+[Live inspector](https://midya8.github.io/buchi-games/lassos.html) | [Base fixed-point method and seven-source ledger](METHOD.md)
 
 ## Separate contract, unchanged v1
 
