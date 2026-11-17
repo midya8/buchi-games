@@ -1,7 +1,7 @@
-# BuchiLab
+# Buchi games
 
 Inspect small turn-based games where a controller must keep reaching a goal.
-BuchiLab returns the winning states, fixed-point rounds, progress ranks,
+Buchi games returns the winning states, fixed-point rounds, progress ranks,
 complete positional policies and reachable non-goal cycles. A separate mode
 handles max-recurring-priority parity games.
 
@@ -9,7 +9,7 @@ Python and browser JavaScript compute the reports separately. A native checker
 also follows every joint positional policy to its eventual lasso. No model,
 API or real-agent execution is involved.
 
-[Interactive inspector](https://midya8.github.io/buchilab/) | [Exact semantics and seven-source ledger](METHOD.md) | [Generator](buchilab/core.py) | [Independent checker](buchilab/verify.py)
+[Interactive inspector](https://midya8.github.io/buchi-games/) | [Exact semantics and seven-source ledger](METHOD.md) | [Generator](buchilab/core.py) | [Independent checker](buchilab/verify.py)
 
 ## A winning state can still have a losing policy
 
@@ -59,13 +59,13 @@ Finite total perfect-information turn-based recurrence, not safety or completion
 
 ## Replay a policy failure
 
-[Repeat the actual failure](https://midya8.github.io/buchilab/lassos.html) | [Witness contract, checks and source notes](LASSOS.md)
+[Repeat the actual failure](https://midya8.github.io/buchi-games/lassos.html) | [Witness contract, checks and source notes](LASSOS.md)
 
 For every failing fixed controller policy and root, inspect the exact prefix once and non-goal cycle forever, with owner and action provenance. A separate report/API/CLI preserves the base v1 contract. Empty prefixes, nonempty self-loops, multiedge cycles, unreachable bad components and duplicate-target action choices are explicit. BFS generation is independently checked with bounded simple walks plus the joint-policy lasso oracle. These are per-policy counterexamples, not a uniform spoiling strategy for the whole game. The lasso release had sixteen native and five Node/Chrome tests, all retained in the current suite.
 
 ## Max-parity games: the maximum that keeps returning
 
-[Parity inspector](https://midya8.github.io/buchilab/parity.html) | [Exact contract, derivation and inspected sources](PARITY.md)
+[Parity inspector](https://midya8.github.io/buchi-games/parity.html) | [Exact contract, derivation and inspected sources](PARITY.md)
 
 Separate six-state/two-move max-recurring-priority games, preserving every old goal and lasso workflow. Inspect classic Zielonka recursion, every synchronous attractor test, both players' complete policies, threshold-induced losing-cycle SCCs and every joint-policy/root lasso. A winning region does not certify a policy; a maximal SCC with an even maximum can still hide an odd self-loop. Prefix priorities do not decide a recurring winner.
 
